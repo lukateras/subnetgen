@@ -6,6 +6,5 @@ stdenv.mkDerivation {
   name = "subnetgen";
   src = lib.cleanSource ./.;
 
-  enableParallelBuilding = true;
-  nativeBuildInputs = [ autoreconfHook ];
+  nativeBuildInputs = [ meson ninja ];
 }
