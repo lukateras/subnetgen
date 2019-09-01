@@ -2,9 +2,11 @@
 
 with pkgs;
 
-stdenv.mkDerivation {
-  name = "subnetgen";
-  src = lib.cleanSource ./.;
+{
+  subnetgen = stdenv.mkDerivation {
+    name = "subnetgen";
+    src = lib.cleanSource ./.;
 
-  nativeBuildInputs = [ meson ninja ];
+    nativeBuildInputs = [ meson ninja ];
+  };
 }
