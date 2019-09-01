@@ -4,6 +4,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+#ifdef _WIN32
+#include "getentropy_windows.h"
+#endif
+
 uint8_t subnetgen_random_uint8() {
   uint8_t n;
   assert(!getentropy(&n, sizeof(n)));

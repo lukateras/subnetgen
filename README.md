@@ -11,6 +11,7 @@ IPv6 subnetworks are [RFC 4193][] ULA conformant.
 
 Randomness is taken from `getentropy(3)`. At the moment of writing,
 this API is only natively supported in Fuchsia, Linux and OpenBSD.
+Compatiblity shim is provided for [Windows](getentropy_windows.h).
 
 | Network | Flag | N, 50% collision chance |     Network capacity |
 | ------- | ---- | ----------------------- | -------------------- |
